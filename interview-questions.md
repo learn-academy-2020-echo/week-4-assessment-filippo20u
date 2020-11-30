@@ -21,11 +21,11 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer:
 
-  it's a chunk of code that delimited by do/end or braces
+  it's a chunk of code that delimited by do/end or braces.
 
   Researched answer:
 
-  Ruby code blocks are are delimited by do/end or curly braces, they can be anonomous or associated with method invocation.
+  Ruby code blocks are are delimited by do/end or curly braces, they can be anonymous or associated with method invocation.
   Ruby lets you group code into a standalone unit thay you can use as method argument.
 
 
@@ -62,7 +62,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Researched answer:
 
-  Ruby has a deffirent definition of object and class compared to javascript, An object is a unit of data. A class is what kind of data it is.
+  Ruby has a different definition of object and class compared to javascript, An object is a unit of data. A class is what kind of data it is.
   object: That's just any piece of data. Like the number 3 or the string 'hello'.
   class: Ruby separates everything into classes. Like integers, floats and strings.
 
@@ -71,12 +71,12 @@ Then, research the question to expand on your answer. Even if you feel you have 
   Your answer:
 
   (not sure how I put this in my mind)
-  duck typying is a way to say that code should be typed describing the funzion and behabiour you are trying to achieve.
+  duck typying is a way to say that code should be typed describing the function and behaviour you are trying to achieve.
   "If it walks like a duck and it quacks like a duck, then it must be a duck"
 
   Researched answer:
 
-  it's a type of  programming typing where  any object may be used in any context, up until it is used in a way that it does not support and it will not work, so in the case of a duck, i don't need to define the object "Duck" but defining the methods "walk" and "quack" is enough.
+  it's a type of  programming typing where  any object may be used in any context, up until it is used in a way that it does not support and it will not work, so in the case of a duck, i don't need to define the object "Duck" but defining the methods "walk" and "quack" is enough to make my code work.ß
 
 
 
@@ -97,3 +97,4 @@ Then, research the question to expand on your answer. Even if you feel you have 
 - Active Record
   The active record pattern is an approach to accessing data in a database. 
   A database table or view is wrapped into a class, an object instance is tied to a single row in the table.
+ßß

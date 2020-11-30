@@ -107,6 +107,7 @@ const mergeArr = (arr1, arr2) => {
 let merged = arr1.concat(arr2)
 console.log ("merged", merged) 
 // filter the array using .filter() and a for loop comparing the values 
+ß
 let filtered = merged.filter((value,) =>{
 for (let index = 0; index < merged.length; index++)
  if (value !== value)

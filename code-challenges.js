@@ -7,29 +7,24 @@ var collections = ["purple", "blue", "green", "yellow", "pink"]
 // Expected output example2 (can be a different order): ["blue", "green", "pink"]
 // Expected output example3 (can be a different order): ["pink", "green"]
 
-// slice remove the first item in the array
-const suffhAndRem = (array) => {
-    for (let i = 0; i < array.length; i++) { 
-// remove the first element  
-     let newArr =  [array.shift(), ...array]
-// check if the array is empty, it doesn't work even if the logic seems to work outside of the function (lines 23-24)
-    if (newArr.length  === 0 ) return "The array is empty"
-// need to shuffle the "array" elements: 
-    else return newArr
 
-    }   
+const suffhAndRem = (array) => {  
+// remove the first value in the array
+    array.shift()
+//  check if the array is not empty  
+    if (array.length == 0) {
+        return "The array is empty" 
+    }
+    // need ot add the shuffle function
+        else {return array}
 }
-
-// var items = [];
-// console.log (items.length) 
+       
 
 console.log("1.1",suffhAndRem(collections))
 console.log("1.2",suffhAndRem(collections))
 console.log("1.3",suffhAndRem(collections))
 console.log("1.4",suffhAndRem(collections))
 console.log("1.5",suffhAndRem(collections))
-console.log("1.6 []:",suffhAndRem(collections))
-
 
 
 // --------------------2) Create a function that takes in an array of numbers and returns the sum of all the numbers cubed.
@@ -46,8 +41,7 @@ const cubeSum = (array) => {
     cube.push(Math.pow(array[i],3))
     }
     // return the array at cube and sum all the elements using reduce
-    return cube.reduce((a, b) => a + b) 
-    
+    return cube.reduce((a, b) => a + b)  
   }
 
 
@@ -85,21 +79,19 @@ var testString1 = "albatross"
 var testString2 = "jabberwocky"
 // Expected output: "jAbBeRwOcKy"
 
-// const everyOthCap = (array) => {
-// // let array = string.split("")
-// // for (let index = 0; index < array.length; index++) {
-// //  if 
-// // }
-//  array.toUpperCase((charAt(0,1,3,5,7,9,)))
-// } 
 
-// const everyOthCap = (string) => {
-//   return  string.charAt(int, 0)
-//     } 
+const everyOthCap = (string) => {
+    let array = string.split("")
+    let cap = array.map((value, index) => {
+        if (index %2 == 1) 
+        return value.toUpperCase()
+        else  return value
+})
+    return cap.join('')
+}  
 
-
-// console.log("4.1", everyOthCap(testString1))
-// console.log("4.2", everyOthCap(testString2))
+console.log("4.1", everyOthCap(testString1))
+console.log("4.2", everyOthCap(testString2))
 
 
 
@@ -110,10 +102,18 @@ var arr1 = [3, 7, 10, 5, 4, 3, 3]
 var arr2 = [7, 8, 2, 3, 1, 5, 4]
 // Expected output: [3, 7, 10, 5, 4, 8, 2, 1]
 
-const mergeArr = (arr1, arr2) =>{
-let merged = [arr1.concat(arr2)]  
-
-return merged.filter((c, index) => { merged.indexOf(c) !== index;})
+const mergeArr = (arr1, arr2) => {
+// merge the two arrays in one
+let merged = arr1.concat(arr2)
+console.log ("merged", merged) 
+// filter the array using .filter() and a for loop comparing the values 
+let filtered = merged.filter((value,) =>{
+for (let index = 0; index < merged.length; index++)
+ if (value !== value)
+    return value
+    })
+    // return `filtered : ${filtered}`
+    return filtered
 }
 
-console.log (mergeArr(arr1,arr2))
+console.log ("5:", mergeArr(arr1,arr2))

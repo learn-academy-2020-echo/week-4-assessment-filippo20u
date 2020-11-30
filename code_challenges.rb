@@ -17,10 +17,8 @@ def is_odd array
 end    
 
 
-p "1.1"
+p "Challenge 1"
 p  is_odd full_arr1
-
-p "1.2"
 p  is_odd full_arr2
 
 
@@ -34,6 +32,13 @@ letter_a = 'a'
 # Expected output: ['tea', 'soda water']
 
 
+def lett_includ (array, letter)
+    array.select do |value|
+        if value.include? letter
+        value
+        end
+    end    
+end  
 
 # def lett_includ array
 #     new_arr = array. do |value|
@@ -42,9 +47,10 @@ letter_a = 'a'
 #      new_arr  
 # end  
 
-# p '2.1'
-# p lett_includ 
-# p '2.2'
+p '2.1'
+p lett_includ beverages_array, letter_o
+p '2.2'
+p lett_includ beverages_array, letter_a
 
 
 
@@ -57,19 +63,15 @@ album2 = 'Sgt Pepper'
 album3 = 'Abbey Road'
 # Expected output: 'bby Rd'
 
+# i can probably also use a .lowercase and avoid to put the capitalized vowels
 def del_vow string
-    string.delete "u"  ,
-    string.delete "e"
-       
+    string.delete "A,E,I,O,U,a,e,i,o,u"    
 end
 
+p "Challenge 3"
 p del_vow album1
 p del_vow album2
 p del_vow album3
-
-
-p "Rubber Soul".delete "u" && "e" && "o" 
-
 
 
 # -------------------4) Create a method that takes in an array of numbers and returns the sum of the numbers. Use the test variables provided.
@@ -88,6 +90,7 @@ def sum array
     sum
 end 
 
+p "Challenge 4"
 p sum nums_array1
 p sum nums_array2
 
@@ -103,3 +106,28 @@ is_palindrome3 = 'Rotator'
 # STRETCH
 is_palindrome4 = 'Was it a cat I saw'
 # Expected output: Was it a cat I saw is a palindrome'
+
+
+# this method works for the first 3 not for the stretch.
+# adding string.delete(" \t\r\n"), works for the fourth one too.
+# method puts everyhting lowercase, delete al the spaces and compare the string with its reversed one.
+def palin_check string
+    if string.downcase.delete(" \t\r\n") == string.delete(" \t\r\n").downcase.reverse
+        "#{string} is a palindrome"
+    else
+        "#{string} is not a palindrome"
+    end
+end
+
+
+p 'Challenge 5'
+
+p palin_check is_palindrome1
+p palin_check is_palindrome2
+p palin_check is_palindrome3
+p palin_check is_palindrome4
+
+# function check (from stackoverflow)
+p is_palindrome4.delete(" \t\r\n")
+
+
